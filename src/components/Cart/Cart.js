@@ -4,11 +4,8 @@ import classes from './Cart.module.css';
 import CartItem from './CartItem';
 
 const Cart = (props) => {
-  const isCartDisabled = useSelector(state=>state.ui.isCartDisabled)
   const cartItems = useSelector(state=>state.cart.items)
   return (
-    <>
-      {isCartDisabled && (
         <Card className={classes.cart}>
         <h2>Your Shopping Cart</h2>
         <ul>
@@ -21,8 +18,6 @@ const Cart = (props) => {
           
         </ul>
       </Card>
-      )}
-    </>
     
   );
 };
